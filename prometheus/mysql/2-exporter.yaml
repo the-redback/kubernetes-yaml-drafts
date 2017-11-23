@@ -1,0 +1,43 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: mysql-exporter
+  namespace: demo
+spec:
+  template:
+    metadata:
+      labels:
+        app: mysql-exporter
+      name: mysql-exporter
+    spec:
+      hostNetwork: true
+      hostPID: true
+      containers:
+      - image: prom/mysqld-exporter 
+        name: mysql-exporter
+        env:
+        - name: DATA_SOURCE_NAME
+          value: "root:test@(172.17.0.6:3306)/"
+        ports:
+        - containerPort: 9104
+          hostPort: 9104
+          name: metrics
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: demo
+  labels:
+    app: mysql-exporter
+    k8s-app: mysql-exporter
+  name: mysql-exporter
+spec:
+  type: ClusterIP
+  clusterIP: None
+  ports:
+  - name: http-metrics
+    port: 9104
+    protocol: TCP
+  selector:
+    app: mysql-exporter

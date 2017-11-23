@@ -1,0 +1,15 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: mysql-exporter
+  namespace: demo
+  labels:
+    k8s-app: mysql-exporter
+spec:
+  jobLabel: k8s-app
+  selector:
+    matchLabels:
+      k8s-app: mysql-exporter
+  endpoints:
+  - port: http-metrics
+    interval: 30s
