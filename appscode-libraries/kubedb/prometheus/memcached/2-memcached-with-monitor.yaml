@@ -1,18 +1,14 @@
 apiVersion: kubedb.com/v1alpha1
 kind: Memcached
 metadata:
-  name: mem3
+  name: mem1
   namespace: demo
 spec:
   replicas: 3
   version: 1.5.3-alpine
-  storage:
-    storageClassName: "standard"
-    accessModes:
-    - ReadWriteOnce
-    resources:
-      requests:
-        storage: 50Mi
+  resources:
+    requests:
+      memory: 50Mi
   monitor:
     agent: coreos-prometheus-operator
     prometheus:

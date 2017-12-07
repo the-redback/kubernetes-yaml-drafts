@@ -1,1 +1,25 @@
 /home/maruf/go/src/github.com/kubedb/elasticsearch/vendor/github.com/kubedb/apimachinery/apis/kubedb/v1alpha1/register.go
+
+var scheme = runtime.NewScheme()
+
+      //scheme := runt
+      //
+      //scheme.AddKnownTypes(tapi.SchemeGroupVersion,
+      // &tapi.Snapshot{},
+      // &tapi.SnapshotList{},
+      // &tapi.DormantDatabase{},
+      // &tapi.DormantDatabaseList{},
+      // &tapi.Elasticsearch{},
+      // &tapi.ElasticsearchList{},
+      // &tapi.Postgres{},
+      // &tapi.PostgresList{},
+      // &tapi.MySQL{},
+      // &tapi.MySQLList{},
+      // &tapi.MongoDB{},
+      // &tapi.MongoDBList{},
+      // &tapi.Redis{},
+      // &tapi.RedisList{},
+      // &tapi.Memcached{},
+      // &tapi.MemcachedList{},
+      //)
+      //metav1.AddToGroupVersion(scheme, SchemeGroupVersion)

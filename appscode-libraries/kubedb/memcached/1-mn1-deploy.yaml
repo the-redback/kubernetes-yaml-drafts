@@ -1,0 +1,11 @@
+apiVersion: kubedb.com/v1alpha1
+kind: Memcached
+metadata:
+  name: mem3
+  namespace: demo
+spec:
+  replicas: 3
+  version: 1.5.3-alpine
+  resources:
+    requests:
+      memory: 50Mi
