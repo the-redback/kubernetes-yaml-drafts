@@ -1,19 +1,25 @@
 apiVersion: kubedb.com/v1alpha1
 kind: Memcached
 metadata:
-  name: mem1
+  name: mc1
   namespace: demo
 spec:
   replicas: 3
   version: 1.5.3-alpine
-  resources:
-    requests:
-      memory: 50Mi
+  #nodeSelector:
+  #  disktype: ssd
+  doNotPause: true
   monitor:
     agent: coreos-prometheus-operator
     prometheus:
       namespace: demo
       labels:
         app: kubedb
-      interval: 2s
-
+      interval: 10s
+  resources:
+    requests:
+      memory: "64Mi"
+      cpu: "250m"
+    limits:
+      memory: "128Mi"
+      cpu: "500m"

@@ -40,4 +40,3 @@ spec:
   selector:
     app: myadmin
   type: LoadBalancer
-
