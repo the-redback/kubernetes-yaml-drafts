@@ -1,7 +1,7 @@
 apiVersion: kubedb.com/v1alpha1
 kind: Snapshot
 metadata:
-  name: snap-xyz
+  name: mgo-xyz
   namespace: demo
   labels:
     kubedb.com/kind: MongoDB

@@ -1,7 +1,7 @@
 apiVersion: kubedb.com/v1alpha1
 kind: MongoDB
 metadata:
-  name: mg1
+  name: mgo1
   namespace: demo
 spec:
   version: 3.4
@@ -17,3 +17,8 @@ spec:
       gitRepo:
         repository: "https://github.com/the-redback/k8s-mongodb-init-script.git"
         directory: .
+  backupSchedule:
+    cronExpression: "@every 1m"
+    storageSecretName: mg-snap-secret
+    gcs:
+      bucket: restic

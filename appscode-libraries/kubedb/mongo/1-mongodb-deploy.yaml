@@ -1,10 +1,10 @@
 apiVersion: kubedb.com/v1alpha1
-kind: Redis
+kind: MongoDB
 metadata:
-  name: r1
+  name: mgo1
   namespace: demo
 spec:
-  version: 4
+  version: 3.4
   doNotPause: true
   storage:
     storageClassName: "standard"
@@ -13,3 +13,8 @@ spec:
     resources:
       requests:
         storage: 50Mi
+  init:
+    scriptSource:
+      gitRepo:
+        repository: "https://github.com/the-redback/k8s-mongodb-init-script.git"
+        directory: .
