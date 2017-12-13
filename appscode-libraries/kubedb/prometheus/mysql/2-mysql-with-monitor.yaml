@@ -20,4 +20,3 @@ spec:
       labels:
         app: kubedb
       interval: 10s
-
