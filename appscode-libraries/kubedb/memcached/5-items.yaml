@@ -1,0 +1,71 @@
+apiVersion: kubedb.com/v1alpha1
+kind: Memcached
+metadata:
+  name: mem17
+  namespace: demo
+spec:
+  replicas: 1
+  version: 1.5.3
+  resources:
+    requests:
+      memory: 50Mi
+---
+apiVersion: kubedb.com/v1alpha1
+kind: Memcached
+metadata:
+  name: mem18
+  namespace: demo
+spec:
+  replicas: 1
+  version: 1.5.3
+  resources:
+    requests:
+      memory: 50Mi
+---
+apiVersion: kubedb.com/v1alpha1
+kind: Memcached
+metadata:
+  name: mem19
+  namespace: demo
+spec:
+  replicas: 1
+  version: 1.5.3
+  resources:
+    requests:
+      memory: 50Mi
+---
+apiVersion: kubedb.com/v1alpha1
+kind: Memcached
+metadata:
+  name: mem20
+  namespace: demo
+spec:
+  replicas: 1
+  version: 1.5.3
+  resources:
+    requests:
+      memory: 50Mi
+---
+apiVersion: kubedb.com/v1alpha1
+kind: Memcached
+metadata:
+  name: mem21
+  namespace: demo
+spec:
+  replicas: 2
+  version: 1.5.3
+  resources:
+    requests:
+      memory: 50Mi
+---
+apiVersion: kubedb.com/v1alpha1
+kind: Memcached
+metadata:
+  name: mem22
+  namespace: demo
+spec:
+  replicas: 1
+  version: 1.5.3
+  resources:
+    requests:
+      memory: 50Mi

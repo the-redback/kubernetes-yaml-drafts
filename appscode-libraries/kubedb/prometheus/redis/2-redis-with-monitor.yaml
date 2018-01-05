@@ -1,7 +1,7 @@
 apiVersion: kubedb.com/v1alpha1
 kind: Redis
 metadata:
-  name: rd
+  name: rd-4
   namespace: demo
 spec:
   version: 4

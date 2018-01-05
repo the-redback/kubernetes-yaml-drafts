@@ -1,7 +1,7 @@
 apiVersion: kubedb.com/v1alpha1
 kind: MySQL
 metadata:
-  name: m1
+  name: m11
   namespace: demo
 spec:
   version: 8.0
@@ -15,5 +15,5 @@ spec:
   init:
     scriptSource:
       gitRepo:
-        repository: "https://github.com/the-redback/mysql-init-script.git"
+        repository: "https://github.com/the-redback/mysql-init-scripts"
         directory: .

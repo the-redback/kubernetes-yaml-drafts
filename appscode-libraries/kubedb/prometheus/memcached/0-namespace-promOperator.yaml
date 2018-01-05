@@ -7,6 +7,15 @@ spec:
   - kubernetes
 
 ---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: demo10
+spec:
+  finalizers:
+  - kubernetes
+
+---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:

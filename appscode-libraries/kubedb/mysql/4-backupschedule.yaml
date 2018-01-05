@@ -1,7 +1,7 @@
 apiVersion: kubedb.com/v1alpha1
 kind: MySQL
 metadata:
-  name: m1
+  name: back1
   namespace: demo
 spec:
   version: 8.0
@@ -19,6 +19,6 @@ spec:
         directory: .
   backupSchedule:
     cronExpression: "@every 1m"
-    storageSecretName: snap-secret
+    storageSecretName: ms-snap-secret
     gcs:
       bucket: restic
