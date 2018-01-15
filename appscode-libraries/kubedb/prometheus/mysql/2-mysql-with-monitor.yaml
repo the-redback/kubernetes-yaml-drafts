@@ -1,7 +1,7 @@
 apiVersion: kubedb.com/v1alpha1
 kind: MySQL
 metadata:
-  name: m11
+  name: m82
   namespace: demo
 spec:
   version: 8.0

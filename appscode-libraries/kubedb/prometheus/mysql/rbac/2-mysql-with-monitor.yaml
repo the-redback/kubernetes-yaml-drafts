@@ -1,0 +1,22 @@
+apiVersion: kubedb.com/v1alpha1
+kind: MySQL
+metadata:
+  name: m82
+  namespace: demo
+spec:
+  version: 8.0
+  storage:
+    storageClassName: "standard"
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 50Mi
+  monitor:
+    agent: coreos-prometheus-operator
+    prometheus:
+      port: 6529
+      namespace: demo
+      labels:
+        app: kubedb
+      interval: 10s
