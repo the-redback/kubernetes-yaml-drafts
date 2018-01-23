@@ -13,7 +13,7 @@ spec:
       requests:
         storage: 50Mi
   monitor:
-    agent: coreos-prometheus-operator
+    agent: prometheus.io/coreos-operator
     prometheus:
       namespace: demo
       labels:

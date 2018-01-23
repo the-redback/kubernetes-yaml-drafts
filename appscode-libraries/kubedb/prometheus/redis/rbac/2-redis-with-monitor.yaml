@@ -1,7 +1,7 @@
 apiVersion: kubedb.com/v1alpha1
 kind: Redis
 metadata:
-  name: rd-4
+  name: rd-3
   namespace: demo
 spec:
   version: 4
@@ -13,7 +13,7 @@ spec:
       requests:
         storage: 50Mi
   monitor:
-    agent: coreos-prometheus-operator
+    agent: prometheus.io/coreos-operator
     prometheus:
       namespace: demo
       labels:

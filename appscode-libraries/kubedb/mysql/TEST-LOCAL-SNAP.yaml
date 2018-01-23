@@ -1,12 +1,13 @@
 apiVersion: kubedb.com/v1alpha1
 kind: Snapshot
 metadata:
-  name: m1-xyz12
+  name: m1-xyz1341000
   namespace: demo
   labels:
     kubedb.com/kind: MySQL
 spec:
-  databaseName: m11
-  storageSecretName: ms-snap-secret
-  gcs:
-    bucket: restic
+  databaseName: m110
+  local:
+    mountPath: /repo
+    volumeSource:
+      emptyDir: {}
