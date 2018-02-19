@@ -1,0 +1,12 @@
+apiVersion: kubedb.com/v1alpha1
+kind: Memcached
+metadata:
+  name: mem2
+  namespace: demo
+spec:
+  doNotPause: false
+  replicas: 1
+  version: 1.5.2
+  resources:
+    requests:
+      memory: 50Mi

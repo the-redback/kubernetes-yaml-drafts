@@ -1,12 +1,12 @@
 apiVersion: kubedb.com/v1alpha1
 kind: Snapshot
 metadata:
-  name: mgo-xyz1
+  name: e-xyz1
   namespace: demo
   labels:
-    kubedb.com/kind: MongoDB
+    kubedb.com/kind: Elasticsearch
 spec:
-  databaseName: mgo1
-  storageSecretName: mg-snap-secret
+  databaseName: e1
+  storageSecretName: es-snap-secret
   gcs:
     bucket: restic

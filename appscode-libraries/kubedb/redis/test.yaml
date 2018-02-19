@@ -1,10 +1,11 @@
 apiVersion: kubedb.com/v1alpha1
-kind: MySQL
+kind: Redis
 metadata:
-  name: m1-test
+  name: r2
   namespace: demo
 spec:
-  version: 8.0
+  version: 4
+  doNotPause: true
   storage:
     storageClassName: "standard"
     accessModes:

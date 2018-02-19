@@ -1,10 +1,10 @@
 apiVersion: kubedb.com/v1alpha1
-kind: MongoDB
+kind: Elasticsearch
 metadata:
-  name: mgo2
+  name: e-wrong
   namespace: demo
 spec:
-  version: 3.2
+  version: 5.6.5
   doNotPause: false
   storage:
     storageClassName: "standard"
@@ -13,8 +13,3 @@ spec:
     resources:
       requests:
         storage: 50Mi
-  init:
-    scriptSource:
-      gitRepo:
-        repository: "https://github.com/the-redback/k8s-mongodb-init-script.git"
-        directory: .
