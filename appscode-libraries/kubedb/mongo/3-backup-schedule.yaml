@@ -1,7 +1,7 @@
 apiVersion: kubedb.com/v1alpha1
 kind: MongoDB
 metadata:
-  name: mgo1
+  name: mgo2
   namespace: demo
 spec:
   version: 3.4
@@ -12,11 +12,6 @@ spec:
     resources:
       requests:
         storage: 50Mi
-  init:
-    scriptSource:
-      gitRepo:
-        repository: "https://github.com/the-redback/k8s-mongodb-init-script.git"
-        directory: .
   backupSchedule:
     cronExpression: "@every 1m"
     storageSecretName: mg-snap-secret

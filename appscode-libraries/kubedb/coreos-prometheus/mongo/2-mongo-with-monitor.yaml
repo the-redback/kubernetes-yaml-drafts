@@ -1,7 +1,7 @@
 apiVersion: kubedb.com/v1alpha1
 kind: MongoDB
 metadata:
-  name: mgo2
+  name: mgo7
   namespace: demo
 spec:
   version: 3.4

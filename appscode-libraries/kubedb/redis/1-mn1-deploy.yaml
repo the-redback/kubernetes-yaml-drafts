@@ -1,15 +1,13 @@
 apiVersion: kubedb.com/v1alpha1
 kind: Redis
 metadata:
-  name: r1
-  namespace: demo
+  name: r14
 spec:
   version: 4
-  doNotPause: true
   storage:
     storageClassName: "standard"
     accessModes:
     - ReadWriteOnce
     resources:
       requests:
-        storage: 50Mi
+        storage: 55Mi

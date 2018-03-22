@@ -6,7 +6,7 @@ metadata:
 spec:
   doNotPause: false
   replicas: 1
-  version: 1.5.3
+  version: 1.5.4
   resources:
     requests:
       memory: 50Mi
