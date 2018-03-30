@@ -1,10 +1,11 @@
 apiVersion: kubedb.com/v1alpha1
 kind: MongoDB
 metadata:
-  name: mgo7
+  name: mgo9
   namespace: demo
 spec:
-  version: 3.4
+  version: 3.6
+  replicas: 1
   storage:
     storageClassName: "standard"
     accessModes:
@@ -16,6 +17,7 @@ spec:
     agent: prometheus.io/coreos-operator
     prometheus:
       namespace: demo
+      port: 1024
       labels:
         app: kubedb
       interval: 10s
