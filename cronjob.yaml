@@ -1,0 +1,29 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: hello
+  labels:
+    app: hello
+spec:
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+           - name: hello
+             image: busybox
+             args:
+             - /bin/sh
+             - -c
+             - echo $SECRET_USERNAME
+             env:
+             - name: SECRET_USERNAME
+               valueFrom:
+                 secretKeyRef:
+                   name: mysecret
+                   key: username
+          restartPolicy: OnFailure
+
+# Create Secret before Deploy
+# kubectl create secret generic mysecret --from-literal=username=produser --from-literal=password=Y4nys7f11
