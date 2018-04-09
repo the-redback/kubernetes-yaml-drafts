@@ -11,7 +11,7 @@ kind: Deployment
 metadata:
   labels:
     app: mysql
-  name: mysql
+  name: mysql-5
   namespace: demo
 spec:
   replicas: 1
@@ -21,8 +21,7 @@ spec:
         app: mysql
     spec:
       containers:
-      - image: mysql
-        imagePullPolicy: Always
+      - image: mysql:8.0
         name: mysql
         env:
           - name: MYSQL_ROOT_PASSWORD
