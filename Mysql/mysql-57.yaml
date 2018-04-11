@@ -1,0 +1,76 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: demo
+spec:
+  finalizers:
+  - kubernetes
+---
+# Headless Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-gvr
+  namespace: demo
+spec:
+  clusterIP: None
+  sessionAffinity: None
+  type: ClusterIP
+
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  labels:
+    app: mysql
+  name: mysql-5
+  namespace: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  serviceName: mysql-gvr
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+      - env:
+        - name: MYSQL_ROOT_PASSWORD
+          value : "test"
+        image: mysql:5.7
+        name: mysql
+        ports:
+        - containerPort: 3306
+          name: db
+          protocol: TCP
+        volumeMounts:
+        - mountPath: /var/lib/mysql
+          name: data
+  volumeClaimTemplates:
+  - metadata:
+      annotations:
+        volume.beta.kubernetes.io/storage-class: standard
+      name: data
+    spec:
+      accessModes:
+      - ReadWriteOnce
+      resources:
+        requests:
+          storage: 1Gi
+      storageClassName: standard
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql
+  namespace: demo
+  labels:
+    name: mysql
+spec:
+  ports:
+    - port: 3306
+  selector:
+    name: mysql
