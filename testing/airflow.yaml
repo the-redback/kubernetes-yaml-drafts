@@ -1,0 +1,36 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: airflow
+  namespace: test
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: airflow
+    spec:
+      restartPolicy: Always
+      containers:
+      - name: webserver
+        image: davideberdin/docker-airflow:0.0.4
+        imagePullPolicy: Always
+        resources:
+          limits:
+            cpu: 1
+            memory: 1Gi
+          requests:
+            cpu: 50m
+            memory: 128Mi
+        securityContext:  #does not have any effect
+          runAsUser: 0    #does not have any effect
+        ports:
+        - name: airflow-web
+          containerPort: 8080
+        args: ["webserver"]

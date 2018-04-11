@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hostaliases-pod
+spec:
+  restartPolicy: Never
+  hostAliases:
+  - ip: "8.8.8.8"
+    hostnames:
+    - "foo.local"
+    - "bar.local"
+  containers:
+  - name: cat-hosts
+    image: busybox
+    command:
+    - ping
+    args:
+    - "foo.local"
