@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}
+  labels:
+    app: {{ .Release.Name }}
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: {{ .Release.Name }}
+      labels:
+        app: {{ .Release.Name }}
+    spec:
+      containers:
+      - name: {{ .Release.Name }}
+        image: alpine
+        env:
+        - name: "USERNAME"
+          valueFrom:
+            secretKeyRef:
+              key:  username
+              name: {{ .Release.Name }}-auth
+        - name: "PASSWORD"
+          valueFrom:
+            secretKeyRef:
+              key:  password
+              name: {{ .Release.Name }}-auth
+
+        imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}
