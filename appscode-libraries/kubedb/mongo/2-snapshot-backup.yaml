@@ -6,7 +6,7 @@ metadata:
   labels:
     kubedb.com/kind: MongoDB
 spec:
-  databaseName: mgo1
-  storageSecretName: mg-snap-secret
+  databaseName: mgo2
+  storageSecretName: my-snap-secret
   gcs:
     bucket: restic

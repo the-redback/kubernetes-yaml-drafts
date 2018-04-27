@@ -1,0 +1,78 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: demo
+spec:
+  finalizers:
+  - kubernetes
+---
+# Headless Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-gvr
+  namespace: demo
+spec:
+  clusterIP: None
+  sessionAffinity: None
+  type: ClusterIP
+
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  labels:
+    app: postgres
+  name: postgres-8
+  namespace: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres
+  serviceName: postgres-gvr
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      containers:
+      - env:
+        - name: POSTGRES_USER
+          value : "postgres"
+        - name: POSTGRES_PASSWORD
+          value : "password"
+        image: postgres
+        name: postgres
+        ports:
+        - containerPort: 5432
+          name: db
+          protocol: TCP
+        volumeMounts:
+        - mountPath: /var/lib/postgresql/data
+          name: data
+  volumeClaimTemplates:
+  - metadata:
+      annotations:
+        volume.beta.kubernetes.io/storage-class: standard
+      name: data
+    spec:
+      accessModes:
+      - ReadWriteOnce
+      resources:
+        requests:
+          storage: 1Gi
+      storageClassName: standard
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres
+  namespace: demo
+  labels:
+    name: postgres
+spec:
+  ports:
+    - port: 5432
+  selector:
+    name: postgres

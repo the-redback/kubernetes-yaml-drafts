@@ -23,7 +23,7 @@ kind: StatefulSet
 metadata:
   labels:
     app: mysql
-  name: mysql-8
+  name: mysql
   namespace: demo
 spec:
   replicas: 1
@@ -40,7 +40,7 @@ spec:
       - env:
         - name: MYSQL_ROOT_PASSWORD
           value : "test"
-        image: mysql:8.0
+        image: mysql:8.0.4
         name: mysql
         ports:
         - containerPort: 3306
@@ -49,6 +49,13 @@ spec:
         volumeMounts:
         - mountPath: /var/lib/mysql
           name: data
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
   volumeClaimTemplates:
   - metadata:
       annotations:

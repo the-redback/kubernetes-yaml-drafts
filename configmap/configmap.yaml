@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: special-config
+  namespace: default
+data:
+  special.level: very
+  special.type: charm
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dapi-test-pod
+spec:
+  containers:
+    - name: test-container
+      image: k8s.gcr.io/busybox
+      command: [ "/bin/sh", "-c", "ls /etc/config/" ]
+      volumeMounts:
+      - name: empty-dir
+        mountPath: /etc/config
+      - name: config-volume
+        mountPath: /etc/config
+        subPath: config
+  volumes:
+    - name: config-volume
+      configMap:
+        name: special-config
+    - name: empty-dir
+      emptyDir: {}
