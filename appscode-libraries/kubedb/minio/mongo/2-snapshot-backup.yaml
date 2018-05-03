@@ -1,0 +1,14 @@
+apiVersion: kubedb.com/v1alpha1
+kind: Snapshot
+metadata:
+  name: mgo-xyz-4
+  namespace: demo
+  labels:
+    kubedb.com/kind: MongoDB
+spec:
+  databaseName: mgo2
+  storageSecretName: minio-snap-secret
+  s3:
+    bucket: restic
+    endpoint: https://192.168.99.100:31350
+

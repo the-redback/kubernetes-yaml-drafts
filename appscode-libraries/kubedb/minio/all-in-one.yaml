@@ -1,0 +1,110 @@
+apiVersion: v1
+data:
+  private.key: LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFb3dJQkFBS0NBUUVBenJCN3JySjZ6eEtSaURocEh1RTVndVRJdXNxNm1FWGhGNHE5RFliWDdKWW8zMEE5Cis0bzJIVnRZcUV3UGVIL2JsRGxvSlVoNjlSOWVkTUl2Y0VEY3A0dlV4TUpsM21nQmtWbStqZUI1WWE5OE10YjcKRm9jTWIrUG5BRmdPVVd1UUd6YW9XVGdpS2s1SE1JdHhGaTE2OU11RGlOZ1BZdU1LZXpxc0t0K2U5NWdLQmd0ZgpKMm0vbFZJdWQ2TmpoRGdwWTR0QWFKeC95UXM1eFo0a1BPY1kyZnlMMFFEQnlaYy9NRzBQSGtOZ0Jub0JmcDBxClErV0c2MG1ZZnVJMDlGK0pmQjZyMUV6OURYaDNrWFBha0Y2d1lrNnpPVDk2YnpVN0plaTlMR3kvazNTTTFGei8KSnpSbUdvN1lvanF5b1NvRmtDTklsMWlHL3ZwMlBBTUJ1Z3ozR3dJREFRQUJBb0lCQUZGaFU1RjVYTGxqaWtHawpWRitBTm5DL08vbXdFTUFiNDRDdGM3cDd1VkRCM3Qzb0lYK0U3OEduVWNVU0RaVllZbEIrT2U5VUZuV2xJRC9BCnBZVUJST0FEUW9jbU00M2FUYU81UGpvR2hFUmVIL3kwZ0xCaUJCZWFHRDRlYmFUSlFUZzEwUnN2NnVQVlpscEsKelAvNmNFc3FSbVAvRGkvVlRTOHY3dElDc2tpeHN3MzB5WlV0V1kzRzlhMHIrRko5YnFQdzlVZDJQY3l6NTlXZQp4T1ZoQkt2UTJhYm9Gakk2L290Z1hybEZaa09EQUFlc2YyZEdIcHNJQ3BPMFdIZjcyMWJWVHdNQWJ1aEZuLzQ1CnI5dStXVTFMMjlhVW0ydVhFOHE0NVdzdWpRbHpOWFVrS1diaHFPeHFvUjNsZjN3M2lqUXV0NTZrRzcvcFp1SE4KN0xsejVxRUNnWUVBMisvY3NGY0NxZno4WnJhQVJqQmFSZGVCSzkwZFllUXJwOW9pNng2bkdDVGF1QTFNb0ZIVwpvbnM0a0ZVSDRPMzZtOE5Td1JYYW44WHlUN0cwSGtUbUVBMUNpTTk3ZmJFVVRPVndoZFpYSS83UDRKRzhLK1FyCktSekprdEFYVmM3ZkwvRk1Sc3lGZlVaalVuL200QlY1ZlFtM21pY3MxZXRGL3ZpNmduNkplNzhDZ1lFQThKU0oKZStGYnRTd1NtZUR5ZkxQMm8rdWFGSjYvZUtsS2d5Nlp0d2lHSkxGRWlUTjV2cllweERXWHcySU5xcFIvTkJteApjR2VScG4xVlV1eGgxYVAyaGsyM3NGUmp5dWxzRDZZVlhjelJWSHBOVTNHVUNKUWtUcnZqNm94a0dBOGJiT3B1Ck1Kc0ZHc1VpWWFqVVdDNy9ldUJxRG10emRMZS9DS0hobkpDaEM2VUNnWUVBalE1WlMvK0NCZVByUFRUdk1CVHkKMExoV2IvdHdUTWc1OTMwL3grdnczdHRFSzZiYjdqYU9vY2JGa0V2NHNabnZrTmJFekhGbnRmRU9aMjVoUnNpSgpoT0g4T2lKWDRWVWczL0NIS2s4OXRDaEl5bzZ0VUxrVnRWaHhMMmVtajdJT0VvRi9taWl4dEpiZ1BKa3JTYXg4CkxtVjlDN0QwWUg1MGRnS3dHK0ZyNjZFQ2dZQTRCWTdDVHljSTJEdDRvNzR6dGNDQVNWTzI2NFNRdDNOSGV1bUcKaXJDYUNNRjU1WWU3RmpaQm4yMDRyVE9iZmpya3lmcmN2dkZXd0tiR3lZNjZyaFN4RDVYdnRLY01VREMrc0NFWApsNk5ETmJ1ZDY3dmFCNDB3M0dYbGIwMjdvSUQxYXQyLzZjbFZnNFJQRTM1bkRvS2xmVzZVN3dhU3Jsc0l5cEY3CjROM3ZsUUtCZ0huMXF3Sk9Fd2JnVGpQazg1WTdXRGZBOVZ2N2J5TitndUxOTGtQb0VnbktScTlMU1NrdzZBN0cKSklMYlFaNmQya09KVDhqT01vdGRhM0VMdG9IZkpGd2VsSUlxVmpBVm1iMkNwVHp4d2ZZd3NUZG9wWFpjM1cxSQpEc1hzd29rT0p1anMrNmNkOG9PbkM0MGlTdUdlVHhXV2g1VGlmTUtsKy9HeEpiNGZKNVJhCi0tLS0tRU5EIFJTQSBQUklWQVRFIEtFWS0tLS0tCg==
+  public.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM4ekNDQWR1Z0F3SUJBZ0lJZWo3L21zaE5mekV3RFFZSktvWklodmNOQVFFTEJRQXdEVEVMTUFrR0ExVUUKQXhNQ1kyRXdIaGNOTVRnd05UQXpNVE13TlRVMFdoY05NVGt3TlRBek1UTXlNREk0V2pBUk1ROHdEUVlEVlFRRApFd1p6WlhKMlpYSXdnZ0VpTUEwR0NTcUdTSWIzRFFFQkFRVUFBNElCRHdBd2dnRUtBb0lCQVFET3NIdXVzbnJQCkVwR0lPR2tlNFRtQzVNaTZ5cnFZUmVFWGlyME5odGZzbGlqZlFEMzdpallkVzFpb1RBOTRmOXVVT1dnbFNIcjEKSDE1MHdpOXdRTnluaTlURXdtWGVhQUdSV2I2TjRIbGhyM3d5MXZzV2h3eHY0K2NBV0E1UmE1QWJOcWhaT0NJcQpUa2N3aTNFV0xYcjB5NE9JMkE5aTR3cDdPcXdxMzU3M21Bb0dDMThuYWIrVlVpNTNvMk9FT0NsamkwQm9uSC9KCkN6bkZuaVE4NXhqWi9JdlJBTUhKbHo4d2JROGVRMkFHZWdGK25TcEQ1WWJyU1poKzRqVDBYNGw4SHF2VVRQME4KZUhlUmM5cVFYckJpVHJNNVAzcHZOVHNsNkwwc2JMK1RkSXpVWFA4bk5HWWFqdGlpT3JLaEtnV1FJMGlYV0liKworblk4QXdHNkRQY2JBZ01CQUFHalV6QlJNQTRHQTFVZER3RUIvd1FFQXdJRm9EQVRCZ05WSFNVRUREQUtCZ2dyCkJnRUZCUWNEQVRBcUJnTlZIUkVFSXpBaGdobHRhVzVwYnkxelpYSjJhV05sTG1SbFptRjFiSFF1YzNaamh3VEEKcUdOa01BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRRENDUFZoUVpZanZhYys2dzF4N1Z6QlVtNGsxakVLSVVwMQpmSVZNMGlZYTgraklqaE9uZUJyWEkyNXhCVXpuTmpyMzVZWEJjKzJZL3g5dU9xVGVuN1hHRE5MOVpRMm5FV2F1CkdiWWVzSDdhK05hckgreWlmTVQ4aHlWUzFSQ3JBREdVNUVUOGlZdWE4Zlg4bHFHVlJnYnhETlUwK09ZS2FsYm8KWUplQ3phMzhIdkNEQ3VTRWh6amF2VzdMdm5xQm5qSkh5NDVwd2xxQVAwaVhidVNPOWlkRXZPcnNyaEdWTi9kYgovRDU1WVNKTnRUeVBPUlovWFBzSnY1SzFrRG1sc2toYng4c2w3dGFMMk1MSDZBeXJaLzZ5ekovb2pnaTVsSk9sCklTQ3dhNmZLMkZFWnBCeWZXekZSbXYrRkpzb2ZnV2dENXBLY0paTGxVV2FkMzBpcC9uTXIKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQotLS0tLUJFR0lOIENFUlRJRklDQVRFLS0tLS0KTUlJQ3VEQ0NBYUNnQXdJQkFnSUJBREFOQmdrcWhraUc5dzBCQVFzRkFEQU5NUXN3Q1FZRFZRUURFd0pqWVRBZQpGdzB4T0RBMU1ETXhNekExTlRSYUZ3MHlPREEwTXpBeE16QTFOVFJhTUEweEN6QUpCZ05WQkFNVEFtTmhNSUlCCklqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQ0FROEFNSUlCQ2dLQ0FRRUF5SXRhVk9FSzlFTmkxZkZkVzg5Y2Q0M1UKaU9JNzZLTGNIVzlNYWFHUzBwK29PR0dSQjZodUF2cDlLN2dJdStOUWRFSDdOYUxGbVRQcHYxYVgrUHZJdDZudgo5U0ZIKy9DL2xabGxYQ3pnWE50OXkyb0p3Uy9kbkU0NitVWU9kaGxRUjFyenBac25LRTFvaUZHNHZnRFhaalg3CmRHS3lNM3M4YlRIZXVOV3IrVnkwWEhzbTdlK21tUGQ5SG84YVVPNm84NFFzVDhVSFhPbDNTdEczdEdUUUZhSGEKRkxnQlFucUhGbEVtZ0Q1STV2djFVL1JDeVFIZDVTSEpCcUtmdG1vT3lCNHFZQkZ1NVZDZS9BN09wWXlEMlB4SwpFVWJXQWFmUEhXWW5UMW5IVkNWQlkvQUdFbXo2dTU3WTY4OFhhQnprVDRrNFo1a3NBWGdJWkpUUFZTK2IzUUlECkFRQUJveU13SVRBT0JnTlZIUThCQWY4RUJBTUNBcVF3RHdZRFZSMFRBUUgvQkFVd0F3RUIvekFOQmdrcWhraUcKOXcwQkFRc0ZBQU9DQVFFQWFieXAvYXlpQUdrd3hGeWpiNHQ4SzAza2pQQzlrUk16aktXVXNkN3Q0UHlGa0pJRwpVQ1RmaWRhbEdKc09ra3M0alQzK2plUWdlS2txci9YcWJpUkxMS2JoNzhEcFE0UE1ESWlYbDBDOTB6SWdDWWFTCkJ5L2c5TU83eEVCTHFtQkV4clZNS1FqMG1mcWhiYlBkbC83NGI0NDhyZlpTYmZ2QU9VKzNVOVN6aFhRdnFKclUKL1pybjJGRkNacWZEcmFndzY1KzFTYVkwQXlwcEhvVms0TUdCSXN6MmozMEE3TElaUkEwOFFVOUpJL015TkcvMwpFS1NCRC9WZjJORkpCOUZzM1JSYUJjYTVOSDRtamErSEFkbjlhejNZRGdEY05sWE1LTzFVdWxsYjBLQTRhYS8zCnk2Wm52Sytza2E2V1F4Mmc4YWJuVlFQR2lUc1FCczNRR0p5RXZ3PT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+kind: Secret
+metadata:
+  creationTimestamp: 2018-05-03T13:21:17Z
+  name: minio-server-secret
+  namespace: default
+  resourceVersion: "27259"
+  selfLink: /api/v1/namespaces/default/secrets/minio-server-secret
+  uid: dcbbc788-4ed4-11e8-860d-080027c0a2a0
+type: Opaque
+
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  # This name uniquely identifies the PVC. Will be used in minio deployment.
+  name: minio-pvc
+  labels:
+    app: minio
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    # This is the request for storage. Should be available in the cluster.
+    requests:
+      storage: 2Gi
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  # This name uniquely identifies the Deployment
+  name: minio-deployment
+  labels:
+    app: minio
+spec:
+  strategy:
+    type: Recreate # If pod fail, we want to recreate pod rather than restarting it.
+  template:
+    metadata:
+      labels:
+        # Label is used as a selector in the service.
+        app: minio-server
+    spec:
+      volumes:
+      # Refer to the PVC have created earlier
+      - name: storage
+        persistentVolumeClaim:
+          # Name of the PVC created earlier
+          claimName: minio-pvc
+      # Refer to minio-server-secret we have created earlier
+      - name: minio-server-secret-private
+        secret:
+          secretName: minio-server-secret
+          items:
+            - key: private.key
+              path: private.key
+      - name: minio-server-secret-public
+        secret:
+          secretName: minio-server-secret
+          items:
+            - key: public.crt
+              path: public.crt
+      containers:
+      - name: minio
+        # Pulls the default Minio image from Docker Hub
+        image: minio/minio
+        args:
+        - server
+        - --address
+        - ":443"
+        - /storage
+        env:
+        # Minio access key and secret key
+        - name: MINIO_ACCESS_KEY
+          value: "asdasd"
+        - name: MINIO_SECRET_KEY
+          value: "123456789"
+        ports:
+        - containerPort: 443
+          # This ensures containers are allocated on separate hosts. Remove hostPort to allow multiple Minio containers on one host
+          hostPort: 443
+        # Mount the volumes into the pod
+        volumeMounts:
+        - name: storage # must match the volume name, above
+          mountPath: "/storage"
+        - name: minio-server-secret-public
+          mountPath: /root/.minio/certs/public.crt
+          subPath: public.crt
+        - name: minio-server-secret-private
+          mountPath: /root/.minio/certs/private.key
+          subPath: private.key
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: minio-service
+  labels:
+    app: minio
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 443
+      targetPort: 443
+      protocol: TCP
+  selector:
+    app: minio-server # must match with the label used in the deployment
