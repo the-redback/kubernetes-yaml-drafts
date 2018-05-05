@@ -1,0 +1,19 @@
+apiVersion: kubedb.com/v1alpha1
+kind: MongoDB
+metadata:
+  name: mgo3
+  namespace: demo
+spec:
+  version: "3.4"
+  storage:
+    storageClassName: "standard"
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 50Mi
+  backupSchedule:
+    cronExpression: "@every 1m"
+    storageSecretName: my-snap-secret
+    gcs:
+      bucket: restic
