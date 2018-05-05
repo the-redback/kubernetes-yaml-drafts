@@ -14,4 +14,4 @@ spec:
         storage: 50Mi
   init:
     snapshotSource:
-      name: m1-xyz
+      name: my-xyz
