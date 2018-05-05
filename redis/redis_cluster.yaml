@@ -1,0 +1,89 @@
+apiVersion: v1
+data:
+  redis.conf: |
+    appendonly yes
+    cluster-enabled yes
+    cluster-config-file /var/lib/redis/nodes.conf
+    cluster-node-timeout 5000
+    dir /var/lib/redis
+    port 6379
+kind: ConfigMap
+metadata:
+  name: redis-conf
+---
+# headless service
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: redis
+  name: redis-service
+  namespace: default
+spec:
+  clusterIP: None
+  ports:
+  - name: redis-port
+    port: 6379
+  selector:
+    app: redis
+    appCluster: redis-cluster
+---
+apiVersion: apps/v1beta1
+kind: StatefulSet
+metadata:
+  name: redis-app
+  namespace: default
+spec:
+  replicas: 6
+  serviceName: redis-service
+  template:
+    metadata:
+      labels:
+        app: redis
+        appCluster: redis-cluster
+    spec:
+      containers:
+      - args:
+        - /etc/redis/redis.conf
+        - --protected-mode
+        - "no"
+        command:
+        - redis-server
+        image: redis:3.2.8
+        name: redis
+        ports:
+        - containerPort: 6379
+          name: redis
+          protocol: TCP
+        - containerPort: 16379
+          name: cluster
+          protocol: TCP
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        volumeMounts:
+        - mountPath: /etc/redis
+          name: redis-conf
+        - mountPath: /var/lib/redis
+          name: redis-data
+      terminationGracePeriodSeconds: 20
+      volumes:
+      - configMap:
+          items:
+          - key: redis.conf
+            path: redis.conf
+          name: redis-conf
+        name: redis-conf
+  volumeClaimTemplates:
+  - metadata:
+      annotations:
+        volume.beta.kubernetes.io/storage-class: standard
+      name: redis-data
+    spec:
+      accessModes:
+      - ReadWriteOnce
+      resources:
+        requests:
+          storage: 1Gi
+      storageClassName: standard
