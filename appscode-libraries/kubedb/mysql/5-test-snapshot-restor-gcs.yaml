@@ -4,7 +4,7 @@ metadata:
   name: r22
   namespace: demo
 spec:
-  version: 8.0
+  version: "8.0"
   storage:
     storageClassName: "standard"
     accessModes:

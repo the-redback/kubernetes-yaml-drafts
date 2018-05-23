@@ -1,7 +1,7 @@
 apiVersion: kubedb.com/v1alpha1
 kind: Snapshot
 metadata:
-  name: mgo-xyz-4
+  name: mgo-xyz-6
   namespace: demo
   labels:
     kubedb.com/kind: MongoDB
@@ -11,4 +11,3 @@ spec:
   s3:
     bucket: restic
     endpoint: https://192.168.99.100:31350
-
