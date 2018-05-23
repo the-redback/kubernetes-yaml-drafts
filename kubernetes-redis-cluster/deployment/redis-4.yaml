@@ -1,0 +1,55 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: "redis-4"
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: redis
+        name: "redis-4"
+    spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 100
+            podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: app
+                  operator: In
+                  values:
+                  - redis
+              topologyKey: kubernetes.io/hostname
+      containers:
+        - name: redis
+          image: "localrepo:5000/redis/redis-4.0.0:v1"
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "100Mi"
+          ports:
+            - name: redis
+              containerPort: 6379
+              protocol: "TCP"
+            - name: cluster
+              containerPort: 16379
+              protocol: "TCP"
+          volumeMounts:
+            - name: "redis-conf"
+              mountPath: "/etc/redis"
+            - name: "redis-data"
+              mountPath: "/var/lib/redis"
+      imagePullSecrets:
+        - name: regsecret
+      volumes:
+        - name: "redis-data"
+          persistentVolumeClaim:
+            claimName: redis-data-redis-app-3
+        - name: "redis-conf"
+          configMap:
+            name: "redis-4-cm"
+            items:
+              - key: "redis.conf"
+                path: "redis.conf"

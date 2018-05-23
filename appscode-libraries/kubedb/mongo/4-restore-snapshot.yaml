@@ -1,7 +1,7 @@
 apiVersion: kubedb.com/v1alpha1
 kind: MongoDB
 metadata:
-  name: r3
+  name: r33
   namespace: demo
 spec:
   version: "3.4"
@@ -15,3 +15,4 @@ spec:
   init:
     snapshotSource:
       name: mgo-xyz
+      namespace: demo

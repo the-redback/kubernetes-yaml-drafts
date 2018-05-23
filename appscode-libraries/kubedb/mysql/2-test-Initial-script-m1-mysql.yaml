@@ -12,8 +12,3 @@ spec:
     resources:
       requests:
         storage: 50Mi
-  init:
-    scriptSource:
-      gitRepo:
-        repository: "https://github.com/the-redback/k8s-mysql-init-script.git"
-        directory: .

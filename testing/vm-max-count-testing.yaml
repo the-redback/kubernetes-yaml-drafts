@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-vmap
+  labels:
+    app: test-vmap
+spec:
+  replicas: 30
+  template:
+    metadata:
+      name: test-vmap
+      labels:
+        app: test-vmap
+    spec:
+      initContainers:
+      - name: test-init
+        image: busybox
+        command:
+          - "sysctl"
+          - "-w"
+          - "vm.max_map_count=262144"
+        imagePullPolicy: IfNotPresent
+        securityContext:
+          privileged: true
+      containers:
+      - name: test-vmap
+        image: busybox
+        command:
+          - "sleep"
+          - "20000000"
+        imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+  selector:
+    matchLabels:
+      app: test-vmap
